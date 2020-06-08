@@ -6,6 +6,7 @@
     <!-- Import tfjs-vis from a CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-automl"></script>
     <link href="./style.css" rel="stylesheet">
 </head>
 
@@ -30,13 +31,21 @@
             };
         </script>
 
-        <p>Prediction output:</p>
-        <p id='p-prediction'></p>
-        <p>Label:</p>
-        <p id='p-label'></p>
+        <p>Prediction output: <span id="p-prediction" style="font-weight:bold"></span></p>
+        <p>Label: <span id="p-label" style="font-weight:bold"></span></p>
+        <h2>Object Detection</h2>
+        <canvas id="canvas"></canvas>
+        <div style="display:none;">
+            <img id="source"  width="500" height="500">
+        </div>
+
+            <!-- <video id="video" playsinline style="display: none;">
+            </video>
+            <canvas id="output" /> -->
+
         <h2>Activations Maps</h2>
         <div id="activations-layer-one">
-            <h3>conv2d activations</h3>
+            <h3>conv2d layer activations</h3>
             <div>
                 <input type="range" min="0" max="15" value="0" id="activations-layer-one-range">
                 <p>Filter number: <span id="activations-layer-one-value"></span></p>
@@ -45,22 +54,42 @@
         </div>
         <div id="activations-layer-two">
             <h3>max_pooling2d activations</h3>
+            <div>
+                <input type="range" min="0" max="15" value="0" id="activations-layer-two-range">
+                <p>Filter number: <span id="activations-layer-two-value"></span></p>
+            </div>
             <div id="plot-activations-two"></div>
         </div>
         <div id="activations-layer-three">
             <h3>conv2d_1 activations</h3>
+            <div>
+                <input type="range" min="0" max="31" value="0" id="activations-layer-three-range">
+                <p>Filter number: <span id="activations-layer-three-value"></span></p>
+            </div>
             <div id="plot-activations-three"></div>
         </div>
         <div id="activations-layer-four">
             <h3>max_pooling2d_1 activations</h3>
+            <div>
+                <input type="range" min="0" max="31" value="0" id="activations-layer-four-range">
+                <p>Filter number: <span id="activations-layer-four-value"></span></p>
+            </div>
             <div id="plot-activations-four"></div>
         </div>
         <div id="activations-layer-five">
             <h3>conv2d_2 activations</h3>
+            <div>
+                <input type="range" min="0" max="63" value="0" id="activations-layer-five-range">
+                <p>Filter number: <span id="activations-layer-five-value"></span></p>
+            </div>
             <div id="plot-activations-five"></div>
         </div>
         <div id="activations-layer-six">
             <h3>max_pooling2d_2 activations</h3>
+            <div>
+                <input type="range" min="0" max="63" value="0" id="activations-layer-six-range">
+                <p>Filter number: <span id="activations-layer-six-value"></span></p>
+            </div>
             <div id="plot-activations-six"></div>
         </div>
         <script src="index.js" type="module"></script>

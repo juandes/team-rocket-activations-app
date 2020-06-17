@@ -1,47 +1,29 @@
 <html>
 
 <head>
-    <!-- Import TensorFlow.js from a CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <!-- Import tfjs-vis from a CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
-    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-automl"></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
     <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="main-centered-container">
-        <h2>Title</h2>
+        <h2>Is a neural network better than Ash at detecting Team Rocket? If so, how?</h2>
         <h3>Introduction</h3>
         <p>...</p>
         <h3>Select an image</h3>
         <input id='input-image' type='file' accept='image/*'><br>
-        <img id='output' style="height:150px; width:150px;">
-        <script>
-            const openFile = function (file) {
-                const input = file.target;
-                const reader = new FileReader();
-                reader.onload = function () {
-                    const dataURL = reader.result;
-                    const output = document.getElementById('output');
-                    output.src = dataURL;
-                };
-                reader.readAsDataURL(input.files[0]);
-            };
-        </script>
+        <img id='output-image' style="height:150px; width:150px;">
+
 
         <p>Prediction output: <span id="p-prediction" style="font-weight:bold"></span></p>
         <p>Label: <span id="p-label" style="font-weight:bold"></span></p>
         <h2>Object Detection</h2>
-        <canvas id="canvas"></canvas>
+        <canvas id="output-detection-canvas"></canvas>
         <div style="display:none;">
-            <img id="source"  width="500" height="500">
+            <img id="output-detections" width="300" height="300">
         </div>
-
-            <!-- <video id="video" playsinline style="display: none;">
-            </video>
-            <canvas id="output" /> -->
 
         <h2>Activations Maps</h2>
         <div id="activations-layer-one">

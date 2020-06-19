@@ -1,0 +1,12 @@
+{
+  "name": "team-rocket-classifier",
+  "version": "1.0.0",
+  "description": "TensorFlow.js web app that plots the activation maps of a CNN model.",
+  "main": "index.js",
+  "author": "Juan De Dios Santos",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}

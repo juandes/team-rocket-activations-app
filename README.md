@@ -14,7 +14,7 @@ The app looks like this
 ![alt](screenshots/2.png)
 
 ## The article
-You can find the article explaining the project at 
+You can find the article explaining the project at [Is a neural network better than Ash at detecting Team Rocket? If so, how?](https://juandes.com/neural-network-team-rocket/)
 
 ## Running the app
 To run the application, you need to host it in a local web server.

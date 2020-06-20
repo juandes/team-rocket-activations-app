@@ -18,5 +18,5 @@ You can find the article explaining the project at [Is a neural network better t
 
 ## Running the app
 To run the application, you need to host it in a local web server.
-I recommend using npm's http-server. To install it, execute the following command `$ npm install http-server -g`.
+I recommend using npm's [http-server](https://www.npmjs.com/package/http-server). To install it, execute the following command `$ npm install http-server -g`.
 Then, from the exercise's root directory, run `$ http-server` to start the server. Once running, access the address presented on screen.

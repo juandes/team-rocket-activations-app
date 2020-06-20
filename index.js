@@ -57,7 +57,6 @@ function setupODCanvas() {
 function initSliders(layerNumber, onInputCb) {
   const slider = document.getElementById(`activations-layer-${layerNumber}-range`);
   const output = document.getElementById(`activations-layer-${layerNumber}-value`);
-  console.log(slider);
   output.innerHTML = slider.value;
 
   slider.oninput = function getSliderValue() {

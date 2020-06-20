@@ -107,7 +107,7 @@ function setupSliders() {
 }
 
 async function setupModels() {
-  classifierModel = await tf.loadLayersModel('http://127.0.0.1:8080/models/tfjs-version/model.json');
+  classifierModel = await tf.loadLayersModel('models/tfjs-version/model.json');
   odModel = await tf.automl.loadObjectDetection('models/object-detection/model.json');
 
   const outputLayers = [];
